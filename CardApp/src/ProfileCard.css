@@ -1,0 +1,64 @@
+.card {
+  width: 300px;
+  height: 200px;
+  background: #1b2a41;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  color: #d8d8d8;
+  text-align: center;
+}
+
+.card:hover {
+  border-radius: 0;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(201, 179, 126, 0.5); 
+}
+
+.border {
+  position: absolute;
+  inset: 0px;
+  border: 2px solid #c9b37e; 
+  opacity: 0;
+  transform: rotate(10deg);
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.card:hover .border {
+  inset: 10px;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.profile-status {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #d8d8d8; 
+}
+
+.card button {
+  background-color: transparent;
+  border: 1px solid #c9b37e; 
+  color: #d8d8d8; 
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card button:hover {
+  background-color: #c9b37e; 
+  color: #1b2a41;
+}
